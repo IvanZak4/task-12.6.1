@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+include_once'./functions.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +21,7 @@
 
             <nav class="nav">
 
-            <a class="nav_link" href="register.php">Войти</a>
+            <a class="nav_link" href="logout.php">Выйти</a>
             </nav>
         </div>
     </div>
@@ -28,8 +31,8 @@
 <div class="intro">
     <div class="container">
         <div class="intro_inner">
-        <h1 class="intro_title">Добро пожаловать в Рай</h1>
-</div>
+        <h1 class="intro_title">Добро пожаловать в Рай, <?php getCurrentUser(); ?></h1>
+        </div>
 </div>
 </div>
 
@@ -102,6 +105,5 @@
         
     </div>
 </div>
-
 </body>
 </html>
